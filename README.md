@@ -7,3 +7,8 @@ Installs:
  - R15B03
  
 Perfect for getting started with basho_bench.
+
+Offers two amazing commands:
+
+ - change_current_erlang (with tab completion)
+ - list_erlangs
