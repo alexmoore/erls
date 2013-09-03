@@ -14,9 +14,9 @@ print_header() {
 
 print_header "Creating ERL Home"
 
-if [ -z $ERL_HOME ]; then ERL_HOME="/opt/erlang"; fi
+if [ -z $ERL_HOME ]; then ERL_HOME="~/erlangs"; fi
 
-[ -d $ERL_HOME ] || mkdir -p $ERL_HOME
+[ -d $ERL_HOME ] || sudo mkdir -p $ERL_HOME; 
 
 cd /tmp/
 
