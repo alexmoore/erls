@@ -60,14 +60,26 @@ make
 make install
 cd ../
 
+print_header "Installing R16B02"
+curl -O http://www.erlang.org/download/otp_src_R16B02.tar.gz
+tar xzvf otp_src_R16B02.tar.gz
+cd otp_src_R16B02
+./configure --prefix=$ERL_HOME/R16B02.64bit.no-hipe --disable-hipe --enable-smp-support --enable-threads --enable-kernel-poll  --enable-darwin-64bit
+make
+make install
+cd ../
+
+
 print_header "Cleaning up"
 rm otp_src_R14B04.tar.gz
 rm otp_src_R15B01.tar.gz
 rm otp_src_R15B03-1.tar.gz
+rm otp_src_R16B02.tar.gz
 
 rm -rf otp_src_R14B04
 rm -rf otp_src_R15B01
 rm -rf otp_src_R15B03
+rm -rf otp_src_R16B02
 
 print_header "Setting up current link"
 
