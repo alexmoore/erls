@@ -14,7 +14,7 @@ print_header() {
 
 print_header "Creating ERL Home"
 
-if [ -z $ERL_HOME ]; then ERL_HOME="$HOME/erlangs"; fi
+if [ -z $ERL_HOME ]; then ERL_HOME="$HOME/.erlangs"; fi
 
 [ -d $ERL_HOME ] || mkdir -p $ERL_HOME; 
 
