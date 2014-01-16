@@ -9,7 +9,7 @@ function list_erlangs() {
   done
 }
 
-function change_current_erlang() {
+function change_erlang() {
   local target=$1
   local cwd=$(pwd)
   
@@ -32,19 +32,18 @@ function change_current_erlang() {
 
 }
 
-function _get_erlangs(){
-  AvailableErls=`ls -l $ERL_HOME | awk '/^d/' | cut -d ' ' -f12- | tr '\n' ' ' `
+function _get_erlangs() {
+  AvailableErls=`ls -l $ERL_HOME | awk '/^d/' | rev | cut -d ' ' -f1 | rev | tr '\n' ' ' `
 }
 
-_change_current_erlang() {
+function _change_erlang() {
   _get_erlangs
   local cur=${COMP_WORDS[COMP_CWORD]}
   COMPREPLY=( $(compgen -W "$AvailableErls" -- $cur) )
 }
 
-complete -F _change_current_erlang change_current_erlang
-
-alias cce="change_current_erlang"
+alias ce="change_erlang"
 alias le="list_erlangs"
 
-complete -F _change_current_erlang cce
+complete -F _change_erlang change_erlang
+complete -F _change_erlang ce
