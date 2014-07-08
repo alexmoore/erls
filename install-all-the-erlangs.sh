@@ -41,7 +41,7 @@ cd ../
 
 print_header "Installing R15B01 with +sfwi patch"
 rm -rf otp_src_R15B01
-curl -O https://gist.github.com/evanmcc/a599f4c6374338ed672e/raw/524050d20a3d1fe10f1aa43b0488f26615f6d396/rg-sfwi-R15B01.patch
+curl -O -L https://gist.github.com/evanmcc/a599f4c6374338ed672e/raw/524050d20a3d1fe10f1aa43b0488f26615f6d396/rg-sfwi-R15B01.patch
 
 tar xvzf otp_src_R15B01.tar.gz
 cd otp_src_R15B01
