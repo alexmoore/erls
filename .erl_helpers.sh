@@ -15,8 +15,8 @@ function change_erlang() {
   
   if [ -z ${1+x} ]; 
   then 
-    echo "USAGE: change_current_erlang TARGET_VERSION";
-    echo "Use list_erlangs to review possible versions";
+    echo "USAGE: change_erlang (ce) TARGET_VERSION";
+    echo "Use list_erlangs (le) to review possible versions";
     return 1;
   fi
 
