@@ -4,11 +4,11 @@ Installs the following erlangs for use on OSX/Bash:
  - R14B04
  - R15B01
  - R15B01 + sfwi patch
- - R15B03
+ - R16B02-Basho5
  
 Perfect for getting started with basho_bench.
 
 Offers two amazing commands:
 
- - change_current_erlang (with tab completion)
- - list_erlangs
+ - change_current_erlang (with tab completion) `ce` for shortcut
+ - list_erlangs `le` for shortcut
